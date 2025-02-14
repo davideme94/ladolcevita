@@ -1,0 +1,411 @@
+/* Estilos Generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #1C1C1C;
+    color: #F5E1C8;
+}
+
+/* Estilos del Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 24px;
+    color: #D4AF37;
+    margin-right: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F5E1C8;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #D4AF37;
+}
+
+.btn-reservar {
+    background-color: #D4AF37;
+    color: #1C1C1C !important;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-reservar:hover {
+    background-color: #8B0000;
+    color: #F5E1C8 !important;
+}
+
+/* 🔹 Hacer que el collage sea el fondo */
+.collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    height: 100vh; /* 🔹 Ocupa toda la pantalla */
+    width: 100%;
+    position: absolute; /* 🔹 Lo pone como fondo */
+    top: 0;
+    left: 0;
+    z-index: -1; /* 🔹 Lo coloca detrás del contenido */
+}
+
+.img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Asigna imágenes específicas */
+.img1 { 
+    background-image: url('static/images/restaurante.webp'); 
+    grid-column: span 1; /* 🔹 Reduce el ancho, antes ocupaba 2 columnas */
+}
+
+
+.img2 { background-image: url('static/images/afuera.webp'); grid-column: span 2;}
+.img3 { background-image: url('static/images/exterior.webp'); grid-column: span 2; }
+.img4 { background-image: url('static/images/cocina.webp'); }
+.img5 { background-image: url('static/images/baño.webp'); }
+
+/* 🔹 Asegurar que el Hero flote sobre el fondo */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    height: 100vh; /* 🔹 Asegura que ocupe toda la pantalla */
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1C1C1C;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Botones */
+.botones {
+    margin-top: 20px;
+}
+
+.btn-negro, .btn-dorado {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-negro {
+    background-color: #1C1C1C;
+    color: #F5E1C8;
+    border: 2px solid #F5E1C8;
+    margin-right: 10px;
+}
+
+.btn-negro:hover {
+    background-color: #8B0000;
+    color: #F5E1C8;
+}
+
+.btn-dorado {
+    background-color: #D4AF37;
+    color: #1C1C1C;
+}
+
+.btn-dorado:hover {
+    background-color: #8B0000;
+    color: #F5E1C8;
+}
+
+
+/* Estilos para la sección Historia */
+.historia {
+    background: url('static/images/exterior.webp') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.historia-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.historia h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 36px;
+    color: #8B0000;
+    margin-bottom: 20px;
+}
+
+.historia p {
+    font-size: 18px;
+    color: #1C1C1C;
+    line-height: 1.6;
+}
+
+
+/* Estilos para la sección Restaurante */
+.restaurante {
+    padding: 80px 10%;
+    background-color: #1C1C1C;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.restaurante-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.restaurante-item img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.texto {
+    padding: 20px;
+    width: 50%;
+}
+
+.texto h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 28px;
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+.texto p {
+    font-size: 18px;
+    color: #F5E1C8;
+    line-height: 1.6;
+}
+
+/* Alterna la imagen y el texto */
+.restaurante-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.localizacion {
+    text-align: center;
+    padding: 60px 10%;
+    background-color: #1C1C1C;
+}
+
+.localizacion h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 32px;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.localizacion p {
+    font-size: 18px;
+    color: #F5E1C8;
+    margin-bottom: 20px;
+}
+
+.mapa-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+
+/* 🔹 Sección de Reservas */
+.reservas {
+    text-align: center;
+    padding: 80px 10%;
+    background-color: #1C1C1C;
+}
+
+.reservas h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 32px;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.reservas p {
+    font-size: 18px;
+    color: #F5E1C8;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Formulario de Reservas */
+.form-reservas {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-reservas label {
+    display: block;
+    font-size: 16px;
+    color: #F5E1C8;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.form-reservas input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 🔹 Botón de Reservar */
+.btn-reservar {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #D4AF37;
+    color: #1C1C1C;
+    transition: background 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+.btn-reservar:hover {
+    background-color: #8B0000;
+    color: #F5E1C8;
+}
+
+/* 🔹 Resaltar el link activo en el menú */
+nav ul li a.active {
+    font-weight: bold;
+    color: #D4AF37;
+}
+
+
+/* 🔹 Estilos para la Carta */
+.carta {
+    text-align: center;
+    padding: 60px 10%;
+    background-color: #1C1C1C;
+}
+
+.carta h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 36px;
+    color: #D4AF37;
+    margin-bottom: 30px;
+}
+
+.carta h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #F5E1C8;
+    margin-top: 30px;
+    border-bottom: 2px solid #D4AF37;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.carta ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.carta ul li {
+    font-size: 18px;
+    color: #F5E1C8;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 🔹 Efecto Hover en los Ítems de la Carta */
+.carta ul li:hover {
+    color: #D4AF37;
+    transition: color 0.3s ease-in-out;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    .carta {
+        padding: 40px 5%;
+    }
+
+    .carta h2 {
+        font-size: 28px;
+    }
+
+    .carta h3 {
+        font-size: 24px;
+    }
+
+    .carta ul li {
+        font-size: 16px;
+    }
+}
